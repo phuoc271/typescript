@@ -1,0 +1,27 @@
+<form>
+    <div class="bar">
+        <a class="list-icon" (click)="layout='list'" [ngClass]="{active:layout =='list'}">
+            <p style="color: #ffffff">list</p>
+        </a>
+        <a class="grid-icon" (click)="layout='grid'" [ngClass]="{active:layout =='grid'}">
+            <p style="color: #ffffff">grid</p>
+        </a>
+    </div>
+    <ul *ngIf=" layout=='grid'" class="grid">
+        <!--A view with big photos and no text -->
+        <li *ngFor="let item of articles">
+            <a :href="item.url" target="_blank">
+                <img src="{{item.image.large}}" />
+            </a>
+        </li>
+    </ul>
+    <ul *ngIf="layout=='list'" class="list">
+        <!--A compact view smaller photos and titles -->
+        <li *ngFor="let item of articles">
+            <a :href="item.url" target="_blank">
+                <img [src]="item.image.small" />
+            </a>
+            <p>{{item.title}}</p>
+        </li>
+    </ul>
+</form>

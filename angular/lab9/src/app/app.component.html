@@ -1,0 +1,55 @@
+<h1>Danh sách sản phẩm</h1>
+<ul class="navbar-nav">
+  <li class="nav-item active">
+    <a class="nav-link" routerLink="/">Home</a>
+  </li>
+  <li class="nav-item active">
+    <a class="nav-link" routerLink="/list">Product list</a>
+  </li>
+</ul>
+<button (click)="addNew()">Thêm mới</button>
+<table border="1">
+  <tr>
+    <th>Hình ảnh</th>
+    <th>Sản phẩm</th>
+    <th>Mã</th>
+    <th>Ngày</th>
+    <th>Giá</th>
+    <th>Mô tả</th>
+    <th>Đánh giá</th>
+    <th>Thao tác</th>
+  </tr>
+  <tr *ngFor="let product of products">
+    <td><img [src]="'../assets/' + product.image" [alt]="product.name" ></td>
+    <td>{{product.name}}</td>
+    <td>{{product.code}}</td>
+    <td>{{product.date | date:'dd/MM/yyyy'}}</td>
+    <td>{{product.price | currency:'USD':'symbol':'1.2-2'}}</td>
+    <td [innerHTML]="product.description"></td>
+    <td>
+      <span *ngFor="let star of product.rating">
+        <i class="fa fa-star" [ngClass]="{ 'checked': star }"></i>
+      </span>
+    </td>
+    <td>
+      <button (click)="edit()">Sửa</button>
+      <button (click)="delete()">Xóa</button>
+    </td>
+  </tr>
+  <div class="row">
+    <div class="col-lg-4" *ngFor="let product of products">
+      <div class="card-deck mt-3">
+        <div class="card">
+          <img class="card-img-top p-3" [src]="'../assets/' + product.image" [alt]="product.name" width="100%"
+            height="250px" alt="">
+          <div class="card-body text-center">
+            <h4 class="card-title">{{product.name}}</h4>
+            <p class="card-text">{{product.price}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</table>

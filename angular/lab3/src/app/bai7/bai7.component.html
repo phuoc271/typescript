@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-lg-4">
+        <img src="{{img}}" alt="">
+    </div>
+    <div class="col-lg-8">
+        <div>
+            <h4>information Student ITC</h4>
+            <ul *ngFor="let stu of student; let i =index" (click)="ViewPic(i)">
+                <li class="list-group-item active ">{{stu.fullname}}</li>
+                <li class="list-group-item ">{{stu.birthday | date:'dd/MM/yyyy'}}</li>
+                <li class="list-group-item ">{{stu.gender}}</li>
+                <li class="list-group-item ">{{stu.mark}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

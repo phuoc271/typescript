@@ -1,0 +1,68 @@
+“<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>”
+<div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <div class="container">
+            <div class="row">
+                <div class="card">
+                    <div class="card-header text-center text-info">
+                        <h5>Mảng 2 chiều</h5>
+                    </div>
+                    <div class="card-body">
+                        <label for="">Các phần tử trong mảng 2 chiều:</label>
+                        <div class="row ">
+                            <div class="col-sm-4 ">
+                                <label for="">Nhập số dòng</label>
+                                <input type="number" [(ngModel)]="R" style="width: 130px;">
+                            </div>
+                            <div class="col-sm-4 ">
+                                <label for="">Nhập số cột</label>
+                                <input type="number" [(ngModel)]="C" style="width: 130px;">
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <br>
+                                <button type="button" class="btn btn-primary " (click)="addToArray(R,C)">Ngẫu
+                                    nhiên</button>
+                            </div>
+                            <div class="text-danger text-justify">
+                                <ul *ngFor="let arr of Array">
+                                    <li>{{arr}}</li>
+                                </ul>
+                            </div>
+
+                            <div class="form-check">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" name="" 
+                                                value="checkedValue">
+                                            Tính tổng số dòng
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" name=""
+                                                value="checkedValue">
+                                            Tính tổng số cột
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <div >
+                            <p>Tính tổng các phần tử trên cùng một dòng</p>
+                            <h5>{{SumRows()}}</h5>
+                        </div>
+                        <div >
+                            <p>Tính tổng các phần tử trên cùng một cột</p>
+                            <h5>{{SumCols(R,C)}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4"></div>
+</div>

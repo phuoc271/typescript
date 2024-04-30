@@ -1,0 +1,21 @@
+<body>
+  <div class="form">
+    <h1>Menu</h1>
+    <ul>
+      <!--Lặp qua mảng services, chỉ định một trình xử lý nhấp chuột và đặt hoặcloại bỏ lớp css "active" -->
+      <li *ngFor="let item of services" [ngClass]="{active: item.active ==true}" (click)="changeActive(item)">
+        <!--Hiển thị name and price trong array .filter cho formatting the price -->
+        {{item.name}}
+        <span>{{item.price}}</span>
+      </li>
+    </ul>
+    <div class="total">
+      <!--Tính lại total khi chọn services. Format lại currency. -->
+      Total:
+      <span>{{Total() | currency}}</span>
+    </div>
+  </div>
+</body>
+<app-bai2></app-bai2>
+<app-bai3></app-bai3>
+<app-bai4></app-bai4>

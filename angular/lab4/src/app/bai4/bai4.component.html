@@ -1,0 +1,35 @@
+<select [(ngModel)]="gia" (change)="sortBy()" name="" id="">
+    <option value="0">Mức giá</option>
+    <option value="199">Dưới 200</option>
+    <option value="499">Từ 200-500</option>
+    <option value="1">Trên 500</option>
+</select>
+<table border="2">
+    <tr>
+        <th>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" checked>
+            </div>
+        </th>
+        <th>Hàng hóa</th>
+        <th>Đơn giá</th>
+        <th>Số lượng</th>
+        <th>Thành tiền</th>
+    </tr>
+    <tr *ngFor="let item of sanpham" id="{{item.id}}">
+        <td>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue"
+                    [ngClass]="{active: item.active ==true}" (click)="changeActive(item)" (click)="ShowAll()">
+            </div>
+        </td>
+        <td>{{item.hanghoa}}</td>
+        <td>{{item.dongia}}</td>
+        <td><input type="number" [(ngModel)]="item.soluong" value="" name="dt" placeholder="{{item.soluong}}"> </td>
+        <td>{{Tinh(item)}}</td>
+    </tr>
+    <tr>
+        <td colspan="4">Tổng tiền: </td>
+        <td>{{Total()}}</td>
+    </tr>
+</table>

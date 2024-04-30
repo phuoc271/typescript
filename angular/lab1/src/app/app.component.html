@@ -1,0 +1,230 @@
+<h3 class="text-center ">{{name}}</h3>
+<h4 class="text-center ">Kỷ niệm {{namht -nambd}} ngày thành lập trường</h4>
+
+<h3>Bài 3</h3>
+<td>check to make month readonly :</td>
+<input type="checkbox" (click)="Readonly()"> <br>
+<input type="date" [readonly]="isReadonly" name="" id="">
+<button type="button" class="btn btn-primary " (click)="Readonly()">Click</button>
+
+<!-- <h3>Bài 4</h3>
+<h1 style="color:green">Disabled Directive</h1>
+<button (click)="toggleDisabled()">Click to Disabled</button>
+<button [disabled]="isDisabled" (click)="myClick()">Message</button>
+<button [hidden]="isDisabled" (click)="toggleDisabled()">Click to enable</button> -->
+
+<h3>Bài 5</h3>
+<label for="">Nhập a: </label>
+<input type="text" [(ngModel)]="a" name="" id=""> <br>
+<label for="">Nhập b: </label>
+<input type="text" [(ngModel)]="b" name="" id=""> <br>
+<!-- <label for="">Kết quả: {{sum()}} </label> <br> -->
+<label for="">Kết quả tổng: {{sum1(a,b)}} </label> <br>
+<label for="">Kết quả hiệu: {{tru(a,b)}} </label> <br>
+<label for="">Kết quả nhan: {{tich(a,b)}} </label> <br>
+<label for="">Kết quả chia: {{thuong(a,b)}} </label> <br>
+<h3>Bài 6</h3>
+<label for="">Kết quả max: {{max(a,b)}} </label> <br>
+
+<h3>Bài 7</h3>
+<div class="row">
+  <div class="col-lg-4"></div>
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-header text-center">
+        <b>Tìm giá trị lớn nhất của 3 số</b>
+      </div>
+      <div class="card-body">
+        <label for="">Nhập a: </label>
+        <input type="text" [(ngModel)]="a3" name="" id=""> <br>
+        <label for="">Nhập b: </label>
+        <input type="text" [(ngModel)]="b3" name="" id=""> <br>
+        <label for="">Nhập c: </label>
+        <input type="text" [(ngModel)]="c3" name="" id=""> <br>
+      </div>
+      <div class="card-footer text-muted">
+        <h3 style="color: darksalmon;">Max: {{isMax()}}</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4"></div>
+</div>
+
+<h3>Bài 8</h3>
+<div class="row">
+  <div class="col-lg-4"></div>
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-header text-center">
+        <b>Cho 3 số a,b,c in ra theo thứ tự tăng dần các số </b>
+      </div>
+      <div class="card-body">
+        <label for="">Nhập a: </label>
+        <input type="text" [(ngModel)]="a4" name="" id=""> <br>
+        <label for="">Nhập b: </label>
+        <input type="text" [(ngModel)]="b4" name="" id=""> <br>
+        <label for="">Nhập c: </label>
+        <input type="text" [(ngModel)]="c4" name="" id=""> <br>
+      </div>
+      <div class="card-footer text-muted">
+        <h3 style="color: darksalmon;">Tăng dần: {{tangdan(a4,b4,c4)}}</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4"></div>
+</div>
+
+
+<h3>Bài 9</h3>
+<div class="row">
+  <div class="col-lg-4"></div>
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-header text-center">
+        <b>Giải phương trình bậc 1</b>
+      </div>
+      <div class="card-body">
+        <label for="">Nhập a: </label>
+        <input type="text" [(ngModel)]="a5" name="" id=""> <br>
+        <label for="">Nhập b: </label>
+        <input type="text" [(ngModel)]="b5" name="" id=""> <br>
+      </div>
+      <div class="card-footer text-muted">
+        <h3 style="color: darksalmon;">{{ptb1(a5,b5)}}</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4"></div>
+</div>
+
+<h3>Bài 10</h3>
+<div class="row">
+  <div class="col-lg-4"></div>
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-header text-center">
+        <b>Giải phương trình bậc 2</b>
+      </div>
+      <div class="card-body">
+        <label for="">Nhập a: </label>
+        <input type="text" [(ngModel)]="a6" name="" id=""> <br>
+        <label for="">Nhập b: </label>
+        <input type="text" [(ngModel)]="b6" name="" id=""> <br>
+        <label for="">Nhập c: </label>
+        <input type="text" [(ngModel)]="c6" name="" id=""> <br>
+      </div>
+      <div class="card-footer text-muted">
+        <!-- <label for="">X1: </label>
+        <input type="text" [(ngModel)]="x1" disabled name="" id="" class="form-control" placeholder="" aria-describedby="helpId"> <br>
+        <label for="">X2: </label>
+        <input type="text" [(ngModel)]="x2" disabled name="" id="" class="form-control" placeholder="" aria-describedby="helpId"> <br>
+        <button type="button" class="btn-primary " (click)="ptb2()">Tính bậc 2</button> -->
+        <h3>{{ptb2()}}</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4"></div>
+</div>
+
+<!-- <h1 class="text-center">Bài 11</h1>
+<div class="card container" style="width: 500px;">
+  <div class="card-header text-center">
+      Giải phương trình
+      <input type="radio" name="" id="" [(ngModel)]="chon" value="bac1"> bậc 1
+      <input type="radio" name="" id="" [(ngModel)]="chon" value="bac2"> bậc 2
+  </div>
+  <div class="card-body">
+      <div class="form-group">
+          <label for="">Nhập a</label>
+          <input [(ngModel)]="a11" type="text" name="" id="" class="form-control" placeholder=""
+              aria-describedby="helpId">
+      </div>
+      <div class="form-group">
+          <label for="">Nhập b</label>
+          <input [(ngModel)]="b11" type="text" name="" id="" class="form-control" placeholder=""
+              aria-describedby="helpId">
+      </div>
+      <div *ngIf="chon=='bac1'">
+          <div class="form-group">
+              <label for="">Nghiệm x</label>
+              <input disabled [(ngModel)]="x" type="text" name="" id="" class="form-control" placeholder=""
+                  aria-describedby="helpId">
+          </div>
+      </div>
+      <div *ngIf="chon=='bac2'">
+          <div class="form-group">
+              <label for="">Nhập c</label>
+              <input [(ngModel)]="c11" type="text" name="" id="" class="form-control" placeholder=""
+                  aria-describedby="helpId">
+          </div>
+          <div class="form-group">
+              <label for="">Nghiệm x1</label>
+              <input disabled [(ngModel)]="kq" type="text" name="" id="" class="form-control" placeholder=""
+                  aria-describedby="helpId">
+          </div>
+          <div class="form-group">
+              <label for="">Nghiệm x2</label>
+              <input disabled [(ngModel)]="kq2" type="text" name="" id="" class="form-control" placeholder=""
+                  aria-describedby="helpId">
+          </div>
+      </div>
+
+  </div>
+  <div class="card-footer text-muted">
+      <div *ngIf="chon=='bac1'">
+          <button type="button" class="btn btn-primary" (click)="PTB1_11()">Kết quả</button>
+      </div>
+      <div *ngIf="chon=='bac2'">
+          <button type="button" class="btn btn-primary" (click)="PTB2_11()">Kết quả</button>
+      </div>
+  </div>
+</div> -->
+<h3>Bài 11</h3>
+<div class="row">
+  <div class="col-lg-4"></div>
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-header text-center">
+        <label for="">Giải PTB1</label>
+        <input type="radio" [(ngModel)]="chon" value="bac1" id="">
+        <label for="">Giải PTB2</label>
+        <input type="radio" [(ngModel)]="chon" value="bac2" id="">
+      </div>
+      <div class="card-body">
+        <label for="">Nhập a: </label>
+        <input type="text" [(ngModel)]="a7" name="" id=""> <br>
+        <label for="">Nhập b: </label>
+        <input type="text" [(ngModel)]="b7" name="" id=""> <br>
+        <div *ngIf="chon=='bac1'">
+          <div class="form-group">
+            <label for="">Nghiệm C</label>
+            <input type="text" [(ngModel)]="kq" disabled name="" id="" class="form-control" placeholder=""
+              aria-describedby="helpId">
+          </div>
+        </div>
+        <div *ngIf="chon=='bac2'">
+          <div class="form-group">
+            <label for="">nhập c: </label>
+            <input type="text" [(ngModel)]="c7" name="" id=""> <br>
+            <label for="">Nghiệm x1</label>
+            <input type="text" [(ngModel)]="x1" disabled name="" id="" class="form-control" placeholder=""
+              aria-describedby="helpId">
+            <label for="">Nghiệm x2</label>
+            <input type="text" [(ngModel)]="x2" disabled name="" id="" class="form-control" placeholder=""
+              aria-describedby="helpId">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="card-footer text-muted">
+        <div *ngIf="chon=='bac1'">
+          <button type="button" class="btn-primary " (click)="ptb1n()">Tính bậc 1</button>
+        </div>
+        <div *ngIf="chon=='bac2'">
+          <button type="button" class="btn-primary " (click)="ptb2n()">Tính bậc 2</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4"></div>
+  </div>

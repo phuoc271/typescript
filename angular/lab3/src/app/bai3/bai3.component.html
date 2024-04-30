@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <div class="container">
+            <div class="row">
+                <div class="card">
+                    <div class="card-header text-center text-info">
+                        <h5>Mảng 2 chiều</h5>
+                    </div>
+                    <div class="card-body">
+                        <label for="">Các phần tử trong mảng 2 chiều:</label>
+                        <div class="row ">
+                            <div class="col-sm-4 ">
+                                <label for="">Nhập số dòng</label>
+                                <input type="number" [(ngModel)]="R" style="width: 130px;">
+                            </div>
+                            <div class="col-sm-4 ">
+                                <label for="">Nhập số cột</label>
+                                <input type="number" [(ngModel)]="C" style="width: 130px;">
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <br>
+                                <button type="button" class="btn btn-primary " (click)="addToArray(R,C)">Ngẫu
+                                    nhiên</button>
+                            </div>
+                            <div class="text-danger text-justify">
+                                <ul *ngFor="let arr of Array">
+                                    <li>{{arr}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <p>Tính tổng các phần tử trên cùng một dòng</p>
+                        <h5>{{SumRows()}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4"></div>
+</div>

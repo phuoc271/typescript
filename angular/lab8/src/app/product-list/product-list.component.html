@@ -1,0 +1,30 @@
+<!-- app.component.html -->
+
+<h1>Bài 1</h1>
+
+<table class="table" border="3">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Product</th>
+      <th>Code</th>
+      <th>Available</th>
+      <th>Price</th>
+      <th>5 star rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of productList; let index = index">
+      <td><img [src]="'../assets/' + item.imageUrl" alt="" height="50px" width="50px"></td>
+      <td>{{ item.productName }}</td>
+      <td>{{ item.productCode }}</td>
+      <td>{{ item.releaseDate }}</td>
+      <td>{{ item.price | currency: 'USD' }}</td>
+      <td>{{ item.starRating }}</td>
+      <td>
+        <app-star [rating]="item.starRating" (outputRating)="showRating($event)"></app-star>
+    </td>
+    </tr>
+  </tbody>
+</table>
+

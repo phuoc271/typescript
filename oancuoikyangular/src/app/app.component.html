@@ -1,0 +1,59 @@
+<nav
+  class="navbar navbar-expand-md navbar-dark sticky-top myboxshadow"
+>
+  <a class="navbar-brand logo ml-5" routerLink="/">
+    <img
+      src="../assets/imagenhan/logo.png"
+      width="100%"
+      height="100%"
+    />
+  </a>
+  <button
+    class="navbar-toggler d-lg-none"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapsibleNavId"
+    aria-controls="collapsibleNavId"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavId">
+    <ul class="navbar-nav mr-auto mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link mt-2 mr-4 ml-4" href="/product-loai/1" onclick="window.location.reload()">NHẪN BẠC</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link mt-2 mr-4 ml-2" href="/product-loai/2"
+          >DÂY CHUYỀN</a
+        >
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link mt-2 mr-4 ml-2" href="/product-loai/3">KHUYÊN TAI</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link mt-2 mr-4 ml-2" href="/product-loai/4">VÒNG TAY</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="/list">DANH SÁCH SẢN PHẨM</a>
+      </li>
+      <ng-container *ngIf="!isAuthenticated()">
+        <li class="nav-item active">
+          <a class="nav-link" href="/login" >ĐĂNG NHẬP</a>
+        </li>
+      </ng-container>
+      <ng-container *ngIf="isAuthenticated()">
+        <li class="nav-item active">
+          <a class="nav-link" href="/Logout" >ĐĂNG XUẤT</a>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,52 @@
+{
+  "user": [
+    {
+      "name": "phuoc",
+      "email": "nguyenhoaiphuoc9@gmail.com",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "name": "phuo25",
+      "email": "nguyenhoaiphuoc25@gmail.com",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "id": "6bc8",
+      "email": "nguyenhoaiphuoc9@gmail.com",
+      "password": "123456",
+      "name": "phuoc"
+    },
+    {
+      "id": "5ab4",
+      "email": "nguyenhoaiphuoc9@gmail.com",
+      "password": "123456",
+      "name": "phuo"
+    },
+    {
+      "id": "ac7a",
+      "email": "nguyenhoaiphuoc9@gmail.com",
+      "password": "123456",
+      "name": "ph"
+    },
+    {
+      "id": "6b3e",
+      "email": "nguyenhoaiphuoc9@gmail.com",
+      "password": "12345",
+      "name": "ph"
+    },
+    {
+      "id": "46cf",
+      "email": "nguyenhoaiphuoc9@gmail.com",
+      "password": "12",
+      "name": "ph"
+    },
+    {
+      "id": "3fcf",
+      "email": "nguyenhoaiphuoc9@gmail.com",
+      "password": "",
+      "name": "ph"
+    }
+  ]
+}
